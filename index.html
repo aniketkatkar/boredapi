@@ -50,7 +50,7 @@
         </div>
     </div>
 <!-- Footer -->
-<footer style="z-index: 100;position: absolute;left: 0;width: 100%;top:100%;display: inline-block;vertical-align: top;" class="container-fluid bg-4 text-center">
+<footer style="z-index: 100;position: absolute;left: 0;width: 100%;top:100%;" class="container-fluid bg-4 text-center">
     <a style="color:rgb(72, 72, 255)" href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank">Stay safe.
       Stay Home.</a><br>
     <a href="http://www.facebook.com/sharer.php?u=http://curfew.xyz" target="_blank"><span class="fa fa-facebook"></span>
@@ -59,9 +59,9 @@
       target="_blank"><span class="fa fa-twitter"></span>
     </a>
     <a style="margin-left:10px" href="whatsapp://send?text=http://curfew.xyz Corona%20GO!"><span class="fa fa-whatsapp"></a>
-    <p style="color:white">Stay updated by visiting</p><a style="color:white" href="https://www.covid19india.org/">https://www.covid19india.org/</a>
+    <p style="color:white">Stay updated by visiting</p><a style="color:white" target="_blank" href="https://www.covid19india.org/">https://www.covid19india.org/</a>
 <br>
-    <a style="font-size:15px" href="index.html">Corona Go!</a>
+    <a style="font-size:15px" href="index1.html">Corona Go!</a>
   </footer>
 
     <!-- JQUERY CDN -->
@@ -78,12 +78,12 @@
 <script>
     function randomQuote() {
     
-    $.getJSON('http://localhost/boredaf/get.php', function(data) {
+    $.getJSON('get.php', function(data) {
         
         var task = (data["task_name"]);
         var author = (data["task_author"]);
         
-        $("#randomQuote").html("<p id='randomQuote'><i class=\"fa fa-quote-left\"></i> &nbsp; &nbsp;" + task + "<br/> <div class=\"text-right\"> &dash;" + author + "</div></p>");
+        $("#randomQuote").html("<p id='randomQuote'><i class=\"fa fa-quote-left\"></i> &nbsp; &nbsp;" + task + "<br/> <div class=\"text-right\"> "  + "</div></p>");
         // $("#tweetMe").attr("href", "https://twitter.com/home/?status=" + task + ' - ' + author);
     });$("#randomQuote").empty();
 }
