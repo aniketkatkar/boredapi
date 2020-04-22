@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
  
  // Try Connect to the DB with new MySqli object - Params {hostname, userid, password, dbname}
- $mysqli = new mysqli("localhost", "root", "", "boredaf");
+ $mysqli = new mysqli("localhost", "curfewxy_boredaf", "Qwerty@66", "curfewxy_boredaf");
 
             
  $statement = $mysqli->prepare("SELECT * FROM tasks ORDER BY RAND() LIMIT 1");
