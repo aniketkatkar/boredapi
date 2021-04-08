@@ -95,12 +95,12 @@
 
 <script>
     function randomQuote() {
-
-        $.getJSON('get.php', function (data) {
-
-            var task = (data["task_name"]);
-            var author = (data["task_author"]);
-
+        console.log('lol');
+        $.getJSON("get.php", {
+    format: "json"
+  }).done(function (data) {
+            var task = (data[0]["task_name"]);
+            var author = (data[0]["task_author"]);
             $("#randomQuote").html("<p id='randomQuote'><i class=\"fa fa-quote-left\"></i> &nbsp; &nbsp;" + task + "<br/> <div class=\"text-right\"> " + "</div></p>");
             // $("#tweetMe").attr("href", "https://twitter.com/home/?status=" + task + ' - ' + author);
         }); $("#randomQuote").empty();

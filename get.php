@@ -32,13 +32,14 @@ $dbname = '2099915_yash';
   $result = $dblink->query("SELECT * FROM tasks ORDER BY RAND() LIMIT 1");
 
 //Initialize array variable
-  $dbdata = array();
+  $data = array();
 
 //Fetch into associative array
   while ( $row = $result->fetch_assoc())  {
-	$dbdata[]=$row;
+	$data[]=$row;
   }
 
 //Print array in JSON format
- echo json_encode($dbdata);
+header('Content-Type: application/json');
+ echo json_encode($data);
 ?>
