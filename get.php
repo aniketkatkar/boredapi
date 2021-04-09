@@ -14,10 +14,10 @@ header('Access-Control-Allow-Origin: *');
 //  echo json_encode(($result->fetch_assoc())); // Parse to JSON and print.
 
 // Initialize variable for database credentials
-$dbhost = 'fdb12.biz.nf';
-$dbuser = '2099915_yash';
-$dbpass = 'Qwerty@66';
-$dbname = '2099915_yash';
+$dbhost = 'localhost';
+$dbuser = 'username';
+$dbpass = 'password';
+$dbname = 'database name';
 
 //Create database connection
   $dblink = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
